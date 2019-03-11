@@ -1,1 +1,10 @@
 <h1>Insert the form to edit an instance of your model here.</h1>
+<form action='/books/<%=@book.id%>' method="POST"><br>
+<input id="hidden" type="hidden" name="_method" value="PATCH">
+Author: <input type="text" name="author" id="author" value="<%=@book.author%>"><br><br>
+Title: <input type="text" name="title" id="title" value="<%=@book.title%>"><br><br>
+Status: <input type="text" name="status" id="status" value="<%=@book.status%>"><br><br>
+Comments:  <br>
+<textarea rows="4" cols ="50" name="comments" id="comments" value="<%=@book.comments%>"></textarea><br><br>
+<input type="submit" value="Submit">
+</form>  

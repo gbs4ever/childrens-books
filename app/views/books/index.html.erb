@@ -1,1 +1,7 @@
 <h1>This is the Model's index page.</h1>
+
+<%@books.each each_with__index do |book, i|%>
+<h3><%=i%>. <%= book.title%></h3><br> 
+<%=book.author%>
+<%end%>
+

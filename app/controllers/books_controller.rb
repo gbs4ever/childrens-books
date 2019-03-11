@@ -2,6 +2,8 @@ class BooksController < ApplicationController
 
   # GET: /books
   get "/books" do
+   @books =Book.all
+   binding.pry
     erb :"/books/index.html"
   end
 
@@ -12,6 +14,8 @@ class BooksController < ApplicationController
 
   # POST: /books
   post "/books" do
+  Book.create(params)
+    
     redirect "/books"
   end
 
