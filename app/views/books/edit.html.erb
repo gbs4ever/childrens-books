@@ -1,5 +1,5 @@
-<h1>Insert the form to edit an instance of your model here.</h1>
-<form action='/books/<%=@book.id%>' method="POST"><br>
+<h1>Please edit any data about your books</h1>
+<form action="/books/<%=@book.id%>" method="POST"><br>
 <input id="hidden" type="hidden" name="_method" value="PATCH">
 Author: <input type="text" name="author" id="author" value="<%=@book.author%>"><br><br>
 Title: <input type="text" name="title" id="title" value="<%=@book.title%>"><br><br>
