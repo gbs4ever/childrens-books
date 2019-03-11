@@ -3,7 +3,7 @@ class BooksController < ApplicationController
   # GET: /books
   get "/books" do
    @books =Book.all
-   binding.pry
+  
     erb :"/books/index.html"
   end
 
