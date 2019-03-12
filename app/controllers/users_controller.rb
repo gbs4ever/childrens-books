@@ -1,8 +1,5 @@
 class UsersController < ApplicationController
-  configure do
-    enable :sessions
-    set :session_secret, "secret"
-  end
+  
 
   #GET: /users  200
   get "/users" do
@@ -35,6 +32,7 @@ class UsersController < ApplicationController
    if user  && user.authenticate(params[:password])
      session[:user_id] = user.id
      redirect "/users/#{user.id}"
+     
    else
     redirect "/users"
    end
@@ -50,13 +48,20 @@ class UsersController < ApplicationController
   # GET: /users/5 200
  get "/users/:id" do
   @user = User.find_by(params[:id])
+  # want to get users books to display as a list index type with 
+  #each book  and a link to that page so we need href and book id 
     if !!session[:user_id]
     erb :"/users/show.html"
     else
     redirect "/users"
     end
   end
+  
 
+
+
+
+  #add later 
   # GET: /users/5/edit
   #get "/users/:id/edit" do
    # erb :"/users/edit.html"
