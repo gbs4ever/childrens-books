@@ -25,23 +25,23 @@ class BooksController < ApplicationController
 
   # GET: /books/5/edit
   get "/books/:id/edit" do
-    
+
   @book = Book.find_by(params[:id])
   erb :"/books/edit.html"
   end
 
   # PATCH: /books/5
   patch "/books/:id" do
-   
     var = Book.find_by(params[:id])
     params.delete("_method")
-    var.update(params) 
+    var.update(params)
     redirect "/books/#{var.id}"
   end
 
   # DELETE: /books/5/delete
-  delete "/books/:id/delete" do
-   Book.find(params[:id]).delete
+  delete "/books/:id" do
+   
+   Book.find_by(params[:id]).delete
     redirect "/books"
   end
 end
