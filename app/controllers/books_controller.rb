@@ -21,9 +21,10 @@ class BooksController < ApplicationController
   # POST: /books
   post "/books" do
    if logged_in?
-    # current_user.build.book(params).save
-    var = Book.create(params)
-    var.update(user:  current_user)
+    binding.pry
+    current_user.books.build(params).save
+    #var = Book.create(params)
+    #var.update(user: current_user)
     redirect "/books"
     else 
     redirect to "/users" 
@@ -70,17 +71,7 @@ end
 
 
 
-  helpers do
-		def logged_in?
-			!!session[:user_id]
-		end
-
-		def current_user
-			User.find(session[:user_id])
-		end
-	end
-
-
+  
 
 
 
