@@ -21,7 +21,7 @@ class BooksController < ApplicationController
   # POST: /books
   post "/books" do
    if logged_in?
-    binding.pry
+   
     current_user.books.build(params).save
     #var = Book.create(params)
     #var.update(user: current_user)
