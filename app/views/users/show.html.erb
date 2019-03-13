@@ -4,6 +4,7 @@
   <div>
     <%@user.books.each_with_index do |book, i|%>
     <a href = "/books/<%=book.id%>"> 
+    
     <h3><%=i+1%>. <%= book.title%></h3> </a>
     Author:  <%=book.author%> 
     <%end%>

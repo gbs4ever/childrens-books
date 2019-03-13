@@ -32,13 +32,13 @@ class BooksController < ApplicationController
   end
   # GET: /books/5
   get "/books/:id" do
-    @book = Book.find_by(params[:id])
+    @book = Book.find(params[:id])
     erb :"/books/show.html"
   end
 
   # GET: /books/5/edit
   get "/books/:id/edit" do
-  @book = Book.find_by(params[:id])
+  @book = Book.find(params[:id])
     if logged_in? && current_user == @book.user
     erb :"/books/edit.html"
     else 

@@ -15,6 +15,7 @@ class UsersController < ApplicationController
   post "/users" do
     user = User.new(params)
     if user.save
+      
       redirect "/users/login"
     else
       redirect "/users"
@@ -31,6 +32,7 @@ class UsersController < ApplicationController
     user = User.find_by(:email => params[:email])
    if user  && user.authenticate(params[:password])
      session[:user_id] = user.id
+     
      redirect "/users/#{user.id}"
      
    else
@@ -50,9 +52,9 @@ class UsersController < ApplicationController
  get "/users/:id" do
   @user = User.find(params[:id])
 
-  # want to get users books to display as a list index type with 
-  #each book  and a link to that page so we need href and book id 
+  
     if logged_in? && current_user == @user
+      flash.now[:alert] = "Hooray, Flash is working!"
     erb :"/users/show.html"
     else
     redirect "/users"
