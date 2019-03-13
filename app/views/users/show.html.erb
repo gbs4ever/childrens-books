@@ -1,10 +1,15 @@
 <h1>Welcome</h1>
-<p> Here are your books that you can edit <%=@user.name %>.
+<p> Here are your books that you can view/edit <%=@user.name %>.
 
   <div>
-    <%= %>
-  </div>
+    <%@user.books.each_with_index do |book, i|%>
+    <a href = "/books/<%=book.id%>"> 
+    <h3><%=i+1%>. <%= book.title%></h3> </a>
+    Author:  <%=book.author%> 
+    <%end%>
+    </div>
+    
 
 
 
-  <p><a href="/logout">Log Out</a></p>
+  

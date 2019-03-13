@@ -38,7 +38,8 @@ class UsersController < ApplicationController
    end
  end
     get "/logout" do
-      session.clear
+     
+      session.destroy
       redirect "/users"
     end
 
@@ -47,10 +48,11 @@ class UsersController < ApplicationController
 
   # GET: /users/5 200
  get "/users/:id" do
-  @user = User.find_by(params[:id])
+  @user = User.find(params[:id])
+
   # want to get users books to display as a list index type with 
   #each book  and a link to that page so we need href and book id 
-    if !!session[:user_id]
+    if logged_in? && current_user == @user
     erb :"/users/show.html"
     else
     redirect "/users"
