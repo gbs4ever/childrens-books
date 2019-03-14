@@ -9,3 +9,4 @@ Specs:  TO DO
 - [ ] add to git isnore certian files 
 - [] Include user input validations
 - [ ] BONUS - not required - Display validation failures to user with error message (example form URL e.g. /posts/new)
+test
