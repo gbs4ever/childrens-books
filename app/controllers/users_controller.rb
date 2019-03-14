@@ -14,10 +14,14 @@ class UsersController < ApplicationController
   # POST: /users    200
   post "/users" do
     user = User.new(params)
-    if user.save
-      
+  if User.find_by_email(params[:email])
+    flash.next[:warning] = "Your login already exsist, Please log in."
+    redirect "/users/login"
+  elsif  user.save
+   flash[:info] = " Sign up success , please login in "
       redirect "/users/login"
-    else
+    else  
+      flash.next[:error] = "Please fill out all fields."
       redirect "/users"
     end
   end
@@ -54,7 +58,7 @@ class UsersController < ApplicationController
 
   
     if logged_in? && current_user == @user
-      flash.now[:alert] = "Hooray, Flash is working!"
+     
     erb :"/users/show.html"
     else
     redirect "/users"

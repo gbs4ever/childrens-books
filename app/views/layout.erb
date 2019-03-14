@@ -16,28 +16,29 @@
     <% flash.keys.each do |type| %>
   <div data-alert class="flash <%= type %> alert-box radius">
     <%= flash[type] %>
-    <a href="#" class="close">close</a>
+    <a href="#" class="close">&times;</a>
   </div>
 <% end %>
   </head>
   <body>
     <div class="wrapper">
-<div >
+<div class ="navbar"  >
 <% if logged_in?  %>
 <!--if loged in -->
-<ul id = "navbar" >
+<ul  >
   <li><a href="/">Home</a></li>
   <li><a href="/books">Books</a></li>
   <li><a href="/logout">Log Out</a></li>
 </ul>
-</div>
+
 <%else%>
-<ul id = "navbar" >
+<ul>
   <li><a href="/">Home</a></li>
    <li><a href="/users/signup">Sign Up</a></li>
   <li><a href="/users/login">Log In</a></li>
 </ul>
 <%end%>
+</div>
 <%#flash%>
 
 

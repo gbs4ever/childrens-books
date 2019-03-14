@@ -1,8 +1,10 @@
-<h1>This is the Model's index page.</h1>
+
+
+<h2>Welcome to childrens library</h2>
 <br>
 <%@books.each_with_index do |book, i|%>
 <a href = "/books/<%=book.id%>"> 
 <h3><%=i+1%>. <%= book.title%></h3><br> 
 <%end%> 
 
-<a href = "/books/new">create a new book </a>
+<a href = "/books/new" ><button type="button">Create a new book</button></a>
