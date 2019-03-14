@@ -40,6 +40,7 @@ class UsersController < ApplicationController
      redirect "/users/#{user.id}"
      
    else
+    flash.next[:error] = "User login faliure."
     redirect "/users"
    end
  end
