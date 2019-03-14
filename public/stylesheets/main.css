@@ -68,15 +68,14 @@
     width: 30%; /* 240px / 800px */
   }
 
-  .navbar {
-    background: #eee;
-    border: 1px solid #ccc;
-    float: right;
-    padding: 2.08333333333%; /* 5px / 240px */
-    width: 30%; /* 240px / 800px */
-    display: block;
-    width: 60px;
-  }
+  
+  
+  
+
+
+
+
+
   .sidebar ul {
     font-size: 14px;
   }
