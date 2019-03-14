@@ -1,11 +1,16 @@
 Specs:  TO DO 
 
 
-- [ ] add user age required and children wont be able to see comments or edit
+- [x] add user age required 
+- [x] Clean up placeholders (capitalize words, remove colons)
+- [ ] Add "[5.2]" to the end of the first line. This is the ActiveRecord version
+- [x]  add a "Create a new book" button As new user logging in just sees current books
+- [ ] The "status" attribute  as a drop down or radio button selection 
+- [ ] children wont be able to see comments or edit
 - [ ] style nave bar 
 - [ ] style flash messages 
 - [ ]  add flash messages 
 - [ ] style better with bootsrap 
-- [ ] add to git isnore certian files 
+- [ ] add to git ignore certian files 
 - [ ] Include user input validations
 - [ ] BONUS - not required - Display validation failures to user with error message (example form URL e.g. /posts/new)
