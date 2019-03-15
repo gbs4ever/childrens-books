@@ -2,10 +2,16 @@
 <form action='/books' method="POST"><br>
 Author: <input type="text" name="author" id="author"required><br><br>
 Title: <input type="text" name="title" id="title"required><br><br>
-Status: <input type="text" name="status" id="status"><br><br>
+Status: <select name="status">
+  <option value="ok">OK</option>
+  <option value="NO">NO</option>
+  <option value="OK?">OK?</option>
+  </select><br><br>
 Comments:  <br>
 <textarea rows="4" cols ="50" name="comments" id="comments"></textarea><br><br>
 <input type="submit" value="Submit">
+
+<input type="reset">
 </form>  
 
 
