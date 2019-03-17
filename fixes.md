@@ -8,7 +8,7 @@ Specs:  TO DO
 - [ ] use  css grid for nave bar 
 - [ ] use css grid symantic ui css for book display 
 - [x] The "status" attribute  as a drop down or radio button selection 
-- [ ] children wont be able to see comments or edit
+- [x] children wont be able to see comments or edit
 - [ ] style nave bar 
 - [ ] style flash messages 
 - [ ] add flash messages 
