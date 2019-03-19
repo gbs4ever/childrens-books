@@ -3,13 +3,14 @@
 
 Author: <%=@book.author%> <br>  
 Status: <%=@book.status%> <br>
-<% if @book.user.age > 18   %>
+<%  if current_user.age > 17 %>
 Comments:  <%=@book.comments%> <br>
-<% else %>
-<br>
-Please contact an adult to edit this book.
 <%end%>
-<%  if logged_in? && current_user == @book.user && @book.user.age > 18  %>
+<br>
+
+
+<%  if logged_in? && current_user == @book.user && current_user.age > 17%>
+
 <a href="/books/<%=@book.id%>/edit">Edit your Books</a>
 <form action="/books/<%=@book.id%>" method="post">
 <input id="hidden" type="hidden" name="_method" value="delete">

@@ -32,6 +32,7 @@ class BooksController < ApplicationController
   end
   # GET: /books/5
   get "/books/:id" do
+    
     @book = Book.find(params[:id])
     erb :"/books/show.html"
   end
@@ -48,7 +49,7 @@ class BooksController < ApplicationController
 
   # PATCH: /books/5
   patch "/books/:id" do
-    var = Book.find_by(params[:id])
+    var = Book.find(params[:id])
      if logged_in? && current_user == var.user
     params.delete("_method")
     var.update(params)
