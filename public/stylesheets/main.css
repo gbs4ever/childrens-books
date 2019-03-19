@@ -67,7 +67,10 @@
     padding: 2.08333333333%; /* 5px / 240px */
     width: 30%; /* 240px / 800px */
   }
+ li { list-style: inline-block;
 
+
+}
   
   
   

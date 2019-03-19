@@ -5,6 +5,9 @@ Specs:  TO DO
 - [x] Clean up placeholders (capitalize words, remove colons)
 - [x] Add "[5.2]" to the end of the first line. This is the ActiveRecord version
 - [x]  add a "Create a new book" button As new user logging in just sees current books
+- [ ] children can only see books that have ok status 
+- [ ] restyle the index books page show 
+- [ ]  let user edit or change password 
 - [ ] use  css grid for nave bar 
 - [ ] use css grid symantic ui css for book display 
 - [x] The "status" attribute  as a drop down or radio button selection 
